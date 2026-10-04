@@ -1,46 +1,56 @@
 [
   {
-    "hata_kodu": "P0301",
-    "arac_modeli": "Renault Megane 2 1.6 16V",
-    "kategori": "Motor - Ateşleme",
-    "teknik_tanim": "1. Silindir Teklemesi",
-    "zorluk_derecesi": "Kolay (Yeşil) - Kendin Yap",
-    "ai_asistan_mesaji": "Merhaba! Motorunuzun 1. silindirinde tekleme tespit ettim. Megane 2'lerde bu durum %90 oranında ateşleme bobini arızasından kaynaklanır. Usta çağırmadan önce ufak bir test yapabiliriz.",
-    "kullanici_eylemi": "1. Motor kapağını sökün.\n2. 1. silindirdeki bobini söküp 2. silindirdeki ile yer değiştirin.\n3. Aracı tekrar çalıştırıp asistan üzerinden tarama yapın.\n4. Hata P0302'ye kayarsa arızalı parça kesinlikle yerini değiştirdiğiniz bobindir. Yeni bir bobin alıp takabilirsiniz.",
-    "gerekli_araclar": ["10mm Lokma Anahtar"],
-    "video_aramasi": "Megane 2 ateşleme bobini değişimi ve yer değiştirme testi"
+    "error_code": "P0301",
+    "vehicle_model": "Renault Megane 2 1.6 16V",
+    "category": "Engine - Ignition",
+    "technical_description": "Cylinder 1 Misfire",
+    "difficulty_level": "Easy (Green) - DIY",
+    "ai_assistant_message": "Hello! I have detected a misfire in cylinder 1 of your engine. In Megane 2s, this is 90% caused by an ignition coil failure. We can do a quick test before calling a mechanic.",
+    "user_action": "1. Remove the engine cover.\n2. Remove the coil on cylinder 1 and swap it with the one on cylinder 2.\n3. Start the vehicle again and scan via the assistant.\n4. If the error shifts to P0302, the faulty part is definitely the coil you moved. You can buy and install a new coil.",
+    "required_tools": [
+      "10mm Socket Wrench"
+    ],
+    "video_search_query": "Megane 2 ignition coil replacement and swap test"
   },
   {
-    "hata_kodu": "DF072",
-    "arac_modeli": "Renault Megane 2 1.6 16V",
-    "kategori": "Güvenlik - Airbag",
-    "teknik_tanim": "Ön Hava Yastığı Açık Devre",
-    "zorluk_derecesi": "Çok Kolay (Yeşil) - Soket Temizliği",
-    "ai_asistan_mesaji": "Ekranda Airbag ışığı yandığını görüyorum. Endişelenmeyin, Megane 2'lerde bu genellikle airbag beyninden değil, koltuk altındaki soketlerin temassızlığından kaynaklanan kronik bir sorundur.",
-    "kullanici_eylemi": "1. Kontak anahtarını yuvadan tamamen çıkarın.\n2. İlgili koltuğun altına eğilin ve 'Sarı' renkli airbag soketini bulun.\n3. Soketi dikkatlice ayırıp pinlere yağsız kontak spreyi sıkın.\n4. Kurumasını bekledikten sonra geri takın ve gevşememesi için plastik cırt kelepçe ile sabitleyin.",
-    "gerekli_araclar": ["Yağsız Kontak Spreyi", "Plastik Cırt Kelepçe"],
-    "video_aramasi": "Megane 2 airbag ışığı koltuk altı sarı soket temizliği çözümü"
+    "error_code": "DF072",
+    "vehicle_model": "Renault Megane 2 1.6 16V",
+    "category": "Safety - Airbag",
+    "technical_description": "Front Airbag Open Circuit",
+    "difficulty_level": "Very Easy (Green) - Connector Cleaning",
+    "ai_assistant_message": "I see the Airbag light is on. Don't worry, in Megane 2s, this is usually a chronic issue caused by loose connections in the connectors under the seat, not the airbag module itself.",
+    "user_action": "1. Remove the ignition key completely from the slot.\n2. Bend down under the relevant seat and find the 'Yellow' airbag connector.\n3. Carefully disconnect the connector and spray oil-free contact cleaner on the pins.\n4. Wait for it to dry, reconnect it, and secure it with a plastic zip tie so it doesn't get loose.",
+    "required_tools": [
+      "Oil-Free Contact Cleaner",
+      "Plastic Zip Tie"
+    ],
+    "video_search_query": "Megane 2 airbag light under seat yellow connector cleaning solution"
   },
   {
-    "hata_kodu": "P0011",
-    "arac_modeli": "Renault Megane 2 1.6 16V",
-    "kategori": "Motor - Zamanlama",
-    "teknik_tanim": "Eksantrik Mili Pozisyon Senkronizasyon Hatası",
-    "zorluk_derecesi": "Orta (Sarı) - Sensör Temizliği veya Servis",
-    "ai_asistan_mesaji": "Motor zamanlamasında bir uyuşmazlık tespit ettim. Eğer aracınız sabahları ilk çalıştırmada 'trrr' diye dizel gibi ses yapıp stop ediyorsa, VVT (Dephaser) kasnağı veya eksantrik mili kaptörü kirlenmiş olabilir.",
-    "kullanici_eylemi": "1. Eksantrik mili kaptörü (motorun sağ üst kısmında bulunur) soketini çıkarın.\n2. Sensörü 10mm anahtarla söküp ucundaki metal talaşları balata spreyi ile temizleyin.\n3. Geri takıp deneyin. Sorun devam ederse, VVT kasnağı mekanik ömrünü doldurmuş olabilir, yetkili bir servisten triger bakımı randevusu almanız önerilir.",
-    "gerekli_araclar": ["10mm Anahtar", "Balata Spreyi"],
-    "video_aramasi": "Megane 2 1.6 16V eksantrik kaptörü temizliği ve VVT kasnak sesi"
+    "error_code": "P0011",
+    "vehicle_model": "Renault Megane 2 1.6 16V",
+    "category": "Engine - Timing",
+    "technical_description": "Camshaft Position Synchronization Error",
+    "difficulty_level": "Medium (Yellow) - Sensor Cleaning or Service",
+    "ai_assistant_message": "I detected a mismatch in engine timing. If your vehicle makes a diesel-like 'trrr' sound and stalls during the first start in the morning, the VVT (Dephaser) pulley or the camshaft position sensor might be dirty.",
+    "user_action": "1. Disconnect the camshaft position sensor connector (located on the top right of the engine).\n2. Remove the sensor with a 10mm wrench and clean the metal shavings on the tip with brake cleaner.\n3. Reinstall and test. If the problem persists, the VVT pulley may have reached the end of its mechanical life; booking a timing belt service appointment at an authorized service center is recommended.",
+    "required_tools": [
+      "10mm Wrench",
+      "Brake Cleaner"
+    ],
+    "video_search_query": "Megane 2 1.6 16V camshaft sensor cleaning and VVT pulley noise"
   },
   {
-    "hata_kodu": "DF010",
-    "arac_modeli": "Renault Megane 2 1.6 16V",
-    "kategori": "Elektronik - Immobilizer",
-    "teknik_tanim": "Direksiyon Kolon Kilidi Açılamadı",
-    "zorluk_derecesi": "Kritik (Kırmızı) - Yolda Bırakabilir",
-    "ai_asistan_mesaji": "Aracın güvenlik sisteminde direksiyon kilidinin açılamadığına dair bir uyarı var. Kartı taktığınızda 'Direksiyon Kilidi Açılmadı' yazıyorsa araç marş basmaz. Çekici çağırmadan önce geçici bir çözüm deneyebiliriz.",
-    "kullanici_eylemi": "1. Kart yuvasına kartı takarken Start/Stop tuşuna basılı tutun.\n2. Aynı anda direksiyonu sağa sola sertçe silkeleyin (Kilidin üzerindeki mekanik baskıyı azaltmak için).\n3. Eğer kilit modülünün içindeki pimi sıkışmışsa bu işlem motorun kilidi açmasını sağlayabilir. Açılırsa aracı stop etmeden doğrudan servise gidin.",
-    "gerekli_araclar": ["Fiziksel Güç (Alet Gerektirmez)"],
-    "video_aramasi": "Megane 2 direksiyon kilidi açılmadı arızası geçici çözüm"
+    "error_code": "DF010",
+    "vehicle_model": "Renault Megane 2 1.6 16V",
+    "category": "Electronics - Immobilizer",
+    "technical_description": "Steering Column Lock Could Not Be Unlocked",
+    "difficulty_level": "Critical (Red) - May Leave You Stranded",
+    "ai_assistant_message": "There is a warning in the vehicle's security system that the steering lock could not be unlocked. If it says 'Steering Not Locked' when you insert the card, the vehicle will not crank. We can try a temporary solution before calling a tow truck.",
+    "user_action": "1. Press and hold the Start/Stop button while inserting the card into the slot.\n2. At the same time, shake the steering wheel vigorously left and right (to reduce the mechanical pressure on the lock).\n3. If the pin inside the lock module is jammed, this process can allow the motor to unlock it. If it unlocks, go straight to the service center without stopping the engine.",
+    "required_tools": [
+      "Physical Force (No Tools Required)"
+    ],
+    "video_search_query": "Megane 2 steering lock not unlocked error temporary solution"
   }
 ]
