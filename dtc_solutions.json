@@ -1,20 +1,46 @@
-# Smart OBD Assistant (AI-Driven Diagnostic Guide) 🚗💻
-
-Standard OBD-II scanners provide raw, confusing Data Trouble Codes (DTCs) like "P0102" or "DF072", leaving standard drivers helpless. **Smart OBD Assistant** is an open-source hardware and software framework designed to read vehicle data and translate it into **actionable, step-by-step DIY repair instructions** powered by logical heuristics.
-
-## 📌 Project Vision
-Instead of just clearing codes, this system:
-1. **Reads Ham Data:** Interfaces with the vehicle's ECU via ELM327/CAN-Bus and Arduino/HC-05 telemetry.
-2. **Analyzes the Fault:** Matches the code with a community-driven JSON database specific to the car model (e.g., Renault Megane 2 1.6 16V).
-3. **Provides Actionable Solutions:** Guides the user with steps like *"Unplug the MAF sensor, use contact cleaner on pins"* rather than just saying *"Circuit Open"*.
-4. **Smart Video Routing:** Automatically searches and links the exact YouTube DIY repair video for that specific car model and fault.
-
-## 🛠️ System Architecture
-* **Hardware:** Arduino Uno / ESP32, HC-05 Bluetooth Module, OBD-II Interface.
-* **Software:** C/C++ (Telemetry), JSON (Fault Matrix Database), Python/App (User Interface).
-
-## 📂 Current Database
-Check the `dtc_solutions.json` file for the initial test matrix built for the notorious chronic issues of the Renault Megane 2 (Ignition coils, VVT Dephaser, Airbag socket issues).
-
----
-*Developed by Tunahan Aycan - Bridging Industrial Automation & Automotive Electronics.*
+[
+  {
+    "hata_kodu": "P0301",
+    "arac_modeli": "Renault Megane 2 1.6 16V",
+    "kategori": "Motor - Ateşleme",
+    "teknik_tanim": "1. Silindir Teklemesi",
+    "zorluk_derecesi": "Kolay (Yeşil) - Kendin Yap",
+    "ai_asistan_mesaji": "Merhaba! Motorunuzun 1. silindirinde tekleme tespit ettim. Megane 2'lerde bu durum %90 oranında ateşleme bobini arızasından kaynaklanır. Usta çağırmadan önce ufak bir test yapabiliriz.",
+    "kullanici_eylemi": "1. Motor kapağını sökün.\n2. 1. silindirdeki bobini söküp 2. silindirdeki ile yer değiştirin.\n3. Aracı tekrar çalıştırıp asistan üzerinden tarama yapın.\n4. Hata P0302'ye kayarsa arızalı parça kesinlikle yerini değiştirdiğiniz bobindir. Yeni bir bobin alıp takabilirsiniz.",
+    "gerekli_araclar": ["10mm Lokma Anahtar"],
+    "video_aramasi": "Megane 2 ateşleme bobini değişimi ve yer değiştirme testi"
+  },
+  {
+    "hata_kodu": "DF072",
+    "arac_modeli": "Renault Megane 2 1.6 16V",
+    "kategori": "Güvenlik - Airbag",
+    "teknik_tanim": "Ön Hava Yastığı Açık Devre",
+    "zorluk_derecesi": "Çok Kolay (Yeşil) - Soket Temizliği",
+    "ai_asistan_mesaji": "Ekranda Airbag ışığı yandığını görüyorum. Endişelenmeyin, Megane 2'lerde bu genellikle airbag beyninden değil, koltuk altındaki soketlerin temassızlığından kaynaklanan kronik bir sorundur.",
+    "kullanici_eylemi": "1. Kontak anahtarını yuvadan tamamen çıkarın.\n2. İlgili koltuğun altına eğilin ve 'Sarı' renkli airbag soketini bulun.\n3. Soketi dikkatlice ayırıp pinlere yağsız kontak spreyi sıkın.\n4. Kurumasını bekledikten sonra geri takın ve gevşememesi için plastik cırt kelepçe ile sabitleyin.",
+    "gerekli_araclar": ["Yağsız Kontak Spreyi", "Plastik Cırt Kelepçe"],
+    "video_aramasi": "Megane 2 airbag ışığı koltuk altı sarı soket temizliği çözümü"
+  },
+  {
+    "hata_kodu": "P0011",
+    "arac_modeli": "Renault Megane 2 1.6 16V",
+    "kategori": "Motor - Zamanlama",
+    "teknik_tanim": "Eksantrik Mili Pozisyon Senkronizasyon Hatası",
+    "zorluk_derecesi": "Orta (Sarı) - Sensör Temizliği veya Servis",
+    "ai_asistan_mesaji": "Motor zamanlamasında bir uyuşmazlık tespit ettim. Eğer aracınız sabahları ilk çalıştırmada 'trrr' diye dizel gibi ses yapıp stop ediyorsa, VVT (Dephaser) kasnağı veya eksantrik mili kaptörü kirlenmiş olabilir.",
+    "kullanici_eylemi": "1. Eksantrik mili kaptörü (motorun sağ üst kısmında bulunur) soketini çıkarın.\n2. Sensörü 10mm anahtarla söküp ucundaki metal talaşları balata spreyi ile temizleyin.\n3. Geri takıp deneyin. Sorun devam ederse, VVT kasnağı mekanik ömrünü doldurmuş olabilir, yetkili bir servisten triger bakımı randevusu almanız önerilir.",
+    "gerekli_araclar": ["10mm Anahtar", "Balata Spreyi"],
+    "video_aramasi": "Megane 2 1.6 16V eksantrik kaptörü temizliği ve VVT kasnak sesi"
+  },
+  {
+    "hata_kodu": "DF010",
+    "arac_modeli": "Renault Megane 2 1.6 16V",
+    "kategori": "Elektronik - Immobilizer",
+    "teknik_tanim": "Direksiyon Kolon Kilidi Açılamadı",
+    "zorluk_derecesi": "Kritik (Kırmızı) - Yolda Bırakabilir",
+    "ai_asistan_mesaji": "Aracın güvenlik sisteminde direksiyon kilidinin açılamadığına dair bir uyarı var. Kartı taktığınızda 'Direksiyon Kilidi Açılmadı' yazıyorsa araç marş basmaz. Çekici çağırmadan önce geçici bir çözüm deneyebiliriz.",
+    "kullanici_eylemi": "1. Kart yuvasına kartı takarken Start/Stop tuşuna basılı tutun.\n2. Aynı anda direksiyonu sağa sola sertçe silkeleyin (Kilidin üzerindeki mekanik baskıyı azaltmak için).\n3. Eğer kilit modülünün içindeki pimi sıkışmışsa bu işlem motorun kilidi açmasını sağlayabilir. Açılırsa aracı stop etmeden doğrudan servise gidin.",
+    "gerekli_araclar": ["Fiziksel Güç (Alet Gerektirmez)"],
+    "video_aramasi": "Megane 2 direksiyon kilidi açılmadı arızası geçici çözüm"
+  }
+]
